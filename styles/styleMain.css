@@ -224,6 +224,7 @@ body{
     gap: 5px;
     color: var(--branco);
     padding: 20px;
+    cursor: pointer;
 }
 
 .categoriaCard{
