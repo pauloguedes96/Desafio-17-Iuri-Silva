@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primaria);
+    cursor: default;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root{
+    --yellow: #FFA634;
+    --gradiente: linear-gradient(to right,#FFA634, #FF267A);
+    --mascara-cards: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    --branco: #F9F9F9;
+    --cinza: #A8A8A8;
+    --cinza-meio: #181818;
+    --fundo: #121214;
+
+    --font-primaria: 'Mukta', sans-serif;
+    --font-secundaria: 'Open Sans', sans-serif;
+
+    --borda-layout: solid 1px white;
+    --borda-layout: none;
+}
+
+/* ============================================== */
+
+.containerSite{
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px auto 80px;
+
+    background-image: url(/images/fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* ============================================== */
+
+.header{
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    border: var(--borda-layout);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+.main{
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    border:var(--borda-layout);
+
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 50px 50px;
+}
+
+.footer{
+    grid-row-start: 3;
+    grid-row-end: 3;
+
+    border: var(--borda-layout);
+/*     background-color: var(--fundo); */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+
+/* ============================================== */
+
+.logoNav p{
+    font-weight: bold;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: transparent;
+    background-image: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    font-weight: 300;
+    color: var(--branco);
+    font-weight: bold;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+#menu img{
+    cursor: pointer;
+}
+
+/* ============================================== */
+
+.filmePrincipal{
+    border: var(--borda-layout);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Filmes{
+    border: var(--borda-layout);
+}
+
+/* ============================================== */
+
+.genero{
+    width: 60px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 5px 0px 5px;
+    background-color: var(--cinza-meio);
+    color: var(--yellow);
+    font-weight: 500;
+}
+
+.duraNota{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 250px;
+    height: 30px;
+    border: var(--borda-layout);
+}
+/* .nota{
+
+} */
+.duracao{
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--branco);
+}
+.nome{
+    border: var(--borda-layout);
+    font-size: 3.5rem;
+    font-family: var(--font-primaria);
+    font-weight: bold;
+    color: var(--branco);
+}
+.descricao{
+    border: var(--borda-layout);
+    width: 400px;
+    color: var(--branco);
+}
+.btnAssistir{
+    border: var(--borda-layout);
+    width: 250px;
+    padding: 5px 5px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+
+/* ============================================== */
+
+.Filmes{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titleFilmes{
+    border: var(--borda-layout);
+}
+
+.titleFilmes p{
+    font-size: 2rem;
+    color: var(--branco);
+}
+
+#linha{
+    width: 50px;
+    border-bottom: solid 3px var(--yellow);
+}
+
+.cardsFilmes{
+    border: var(--borda-layout);
+    display: grid;
+    grid-template: auto / auto auto auto auto auto;
+    justify-content: space-between;
+}
+
+.cards{
+    background-color: var(--yellow);
+    height: 340px;
+    width: 230px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+    color: var(--branco);
+    padding: 20px;
+}
+
+.categoriaCard{
+    width: 80px;
+    border-radius: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--yellow);
+    background-color: var(--cinza-meio);
+    font-size: 0.8rem;
+}
+
+.notaCard{
+    width: 80px;
+/*     border: solid 1px var(--branco); */
+    display: flex;
+}
+
+.notaCard img{
+    width: 15px;
+}
+
+.nomeCard{
+/*     border: solid 1px var(--branco); */
+    font-size: 2rem;
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.card1{
+    background-image: var(--mascara-cards), url(/images/Shang-Chi-and-the-Legend-of-the-Ten-Rings-Releases-New\ 2.png);
+}
+.card2{
+    background-image: var(--mascara-cards), url(/images/Rectangle\ 8.png);
+}
+.card3{
+    background-image: var(--mascara-cards), url(/images/1055866470-loki-poster-oficial-1\ 1.png);
+}
+.card4{
+    background-image: var(--mascara-cards), url(/images/FCUzyDmVUAA8soy\ 1.png);
+}
+.card5{
+    background-image: var(--mascara-cards), url(/images/poster-impresso-the-witcher-netflix-loja\ 1.png);
+}
+
+/* ============================================== */
+
+.logoFooter{
+    font-weight: 600;
+    font-size: 2.0rem;
+    cursor: pointer;
+    color: var(--branco);
+}
+.socialIcons{
+    display: flex;
+    gap: 30px;
+
+}
+
+.socialIcons img {
+    width: 20px;
+    cursor: pointer;
+}
+
+/* ============================================== */
+
+@media only screen and (min-width: 1850px) {
+
+    .cards{
+        height: 440px;
+        width: 330px;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+
+    .cards{
+        height: 340px;
+        width: 230px;
+    }
+
+    .cardsFilmes{
+        border: var(--borda-layout);
+        display: grid;
+        grid-template: auto auto / auto auto auto auto;
+        justify-content: space-between;
+        gap: 30px 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .cards{
+        height: 340px;
+        width: 230px;
+    }
+
+    .cardsFilmes{
+        border: var(--borda-layout);
+        display: grid;
+        grid-template: auto auto auto / auto auto auto;
+        justify-content: space-between;
+        gap: 30px 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 820px) {
+
+    .cards{
+        height: 340px;
+        width: 230px;
+    }
+
+    .cardsFilmes{
+        border: var(--borda-layout);
+        display: grid;
+        grid-template: auto auto auto auto / auto auto;
+        justify-content: space-evenly;
+        gap: 30px 0px;
+    }
+    
+}
+
+@media only screen and (max-width: 590px) {
+
+    .header{
+        width: 90%;
+        margin: auto;
+    }
+
+    .main{
+        width: 90%;
+        margin: auto;
+    }
+
+    .footer{
+        width: 90%;
+        margin: auto;
+    }
+
+    .descricao{
+        border: var(--borda-layout);
+        width: 100%;
+        color: var(--branco);
+    }
+
+    .cards{
+        height: 340px;
+        width: 230px;
+    }
+
+    .cardsFilmes{
+        border: var(--borda-layout);
+        display: grid;
+        grid-template: auto auto auto auto auto / auto;
+        align-items: center;
+        gap: 30px 0px;
+    }    
+
+    .duraNota{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 0px;
+    }
+
+    .btnAssistir{
+        border: var(--borda-layout);
+        width: 250px;
+        width: 100%;
+    }
+}
+
+#btnMobile{
+    display: none;
+}
+
+@media only screen and (max-width: 590px) {
+    
+    #btnMobile{
+        display: flex;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        background:none;
+        gap: 10px;
+        align-items: center;
+        color: var(--branco);
+    }
+
+    #hamburguer{
+        width: 20px;
+        border-top: solid 2px var(--branco);
+    }
+
+    #hamburguer::after, #hamburguer::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-top: 5px;
+        background-color: var(--branco);
+        position: relative;
+    }
+
+    #nav.active #hamburguer{
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburguer::before{
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+
+    #menu{
+        display: none;
+/*         display: block; */
+        position: absolute;
+        width: 100%;
+        top: 83px;
+        right: 0;
+        border: var(--borda-layout);
+        z-index: 10000;
+
+    }
+
+    #nav.active #menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: var(--yellow);
+        padding: 10px;
+        gap: 10px;
+        
+    }
+
+    #nav.active #menu ul{
+        border: solid 1px var(--cinza);
+        color: var(--fundo);
+    }
+
+    .socialIcons img {
+        width: 15px;
+    }
+}

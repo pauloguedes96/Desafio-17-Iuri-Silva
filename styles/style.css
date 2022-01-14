@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primaria);
+    color: var(--branco);
+    cursor: default;
+}
+
+:root{
+    --yellow: #FFA634;
+    --gradiente: linear-gradient(to right,#FFA634, #FF267A);
+    --branco: #F9F9F9;
+    --cinza: #A8A8A8;
+    --cinza-meio: #181818;
+    --fundo: #121214;
+
+    --font-primaria: 'Mukta', sans-serif;
+    --font-secundaria: 'Open Sans', sans-serif;
+}
+
+/* ============================================= */
+
+.containerSite{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--fundo);
+    display: grid;
+    grid-template-rows: 100px auto auto auto;
+}
+
+.header{
+/*     border: solid 1px white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.title{
+/*     border: solid 1px white; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.users{
+/*     border: solid 1px white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.addPerfil{
+/*     border: solid 1px white; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* ============================================= */
+
+.header h1{
+    color: transparent;
+    background-image: var(--gradiente);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: var(--font-primaria);
+    font-weight: bold;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.header h2{
+    font-weight: 300;
+    cursor: default;
+}
+
+/* ============================================= */
+
+.title h1, .title h3{
+    font-weight: 300;
+}
+
+.title h1{
+    font-size: 4rem;
+}
+
+.title h3{
+    font-size: 2rem;
+}
+
+/* ============================================= */
+
+.us{
+    width: 220px;
+    height: 220px;
+/*     background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor:default;
+}
+
+.us p{
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.img{
+    width: 160px;
+    height: 160px;
+    border-radius: 160px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.img:hover{
+    filter:brightness(70%);
+}
+
+.user1{
+    background-color: #6113B6;
+}   
+.user2{
+    background-color: #62EF84;
+}   
+.user3{
+    background-color: #4DC7F6;
+}   
+
+/* ============================================= */
+
+.btnAdd{
+    background-color: var(--cinza-meio);
+    color:var(--branco);
+    padding: 8px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.btnAdd:hover{
+    filter:brightness(120%);
+}
+
+@media only screen and (max-width: 1360px) {
+    
+    .title{
+        justify-content: flex-start;
+    }
+    
+    .users{
+        align-items: flex-start;
+    }
+    .title h1{
+        font-size: 3rem;
+    }
+    
+    .title h3{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 865px) {
+
+    .containerSite{
+        height: 100%;
+        width: 100vw;
+    }
+    .users{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px 0px;
+    }
+    .title{
+            text-align: center;
+            padding: 10px 20px;
+        }
+    .addPerfil{
+        padding: 50px 0px;
+    }
+}
+

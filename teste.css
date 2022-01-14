@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    justify-content: space-between;
+    background-color: silver;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+}
+
+#btnMobile{
+    display: none;
+}
+
+@media only screen and (max-width: 300px) {
+
+    #btnMobile{
+        display: block;
+    }
+
+    #menu{
+        display: none;
+    }
+}
