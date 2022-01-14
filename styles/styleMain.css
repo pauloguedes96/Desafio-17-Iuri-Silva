@@ -36,7 +36,7 @@ body{
     display: grid;
     grid-template-rows: 100px auto 80px;
 
-    background-image: url(/images/fundo.png);
+    background-image: url(../images/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -257,19 +257,19 @@ body{
 }
 
 .card1{
-    background-image: var(--mascara-cards), url(/images/Shang-Chi-and-the-Legend-of-the-Ten-Rings-Releases-New\ 2.png);
+    background-image: var(--mascara-cards), url(../images/Shang-Chi-and-the-Legend-of-the-Ten-Rings-Releases-New\ 2.png);
 }
 .card2{
-    background-image: var(--mascara-cards), url(/images/Rectangle\ 8.png);
+    background-image: var(--mascara-cards), url(../images/Rectangle\ 8.png);
 }
 .card3{
-    background-image: var(--mascara-cards), url(/images/1055866470-loki-poster-oficial-1\ 1.png);
+    background-image: var(--mascara-cards), url(../images/1055866470-loki-poster-oficial-1\ 1.png);
 }
 .card4{
-    background-image: var(--mascara-cards), url(/images/FCUzyDmVUAA8soy\ 1.png);
+    background-image: var(--mascara-cards), url(../images/FCUzyDmVUAA8soy\ 1.png);
 }
 .card5{
-    background-image: var(--mascara-cards), url(/images/poster-impresso-the-witcher-netflix-loja\ 1.png);
+    background-image: var(--mascara-cards), url(../images/poster-impresso-the-witcher-netflix-loja\ 1.png);
 }
 
 /* ============================================== */
